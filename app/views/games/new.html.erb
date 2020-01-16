@@ -1,0 +1,20 @@
+<h1>New game</h1>
+<div>
+</div>
+
+<% @letters.each do |letter| %>
+  <span style="background-color: blue; color: white"><%= letter %></span>
+<% end %>
+
+<form action="/score" method="get">
+  <input type="text" name="guess" value="">
+  <input type="hidden" name="grid" value="<%= @letters.join %>">
+  <input type="submit">
+</form>
+
+
+<div class= "link">
+  <a><%= link_to "Play again", "/new" %></a>
+</div>
+
+
