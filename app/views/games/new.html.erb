@@ -2,11 +2,13 @@
 <div>
 </div>
 
+<div class= "letters">
 <% @letters.each do |letter| %>
   <span style="background-color: blue; color: white"><%= letter %></span>
 <% end %>
+</div>
 
-<form action="/score" method="get">
+<form class= "form" action="/score" method="get">
   <input type="text" name="guess" value="">
   <input type="hidden" name="grid" value="<%= @letters.join %>">
   <input type="submit">
